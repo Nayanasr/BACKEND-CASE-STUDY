@@ -1,0 +1,32 @@
+﻿@model Dictionary1WebApp.Models.Word
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Word</h4>
+    <hr />
+
+    <div class=" card m-3" style="width:1000px; height: 200px">
+        <div class=" card text-dark bg-light mb-3">
+
+            <div class="card-body">
+
+                 <h4 style="color:forestgreen">@Html.DisplayNameFor(model => model.Addword)</h4>
+                <h2> @Html.DisplayFor(model => model.Addword)</h2>
+                <h4 style="color:forestgreen"> @Html.DisplayNameFor(model => model.WordDefinition)</h4>
+                <h2>@Html.DisplayFor(model => model.WordDefinition)</h2>
+
+            </div>
+           
+
+        </div>
+
+    </div>
+    <div>
+        <a class="btn btn-success" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+        <a class="btn btn-success" asp-action="Index">Back to List</a>
+    </div>
